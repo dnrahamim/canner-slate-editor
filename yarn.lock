@@ -7842,9 +7842,9 @@ slate-edit-table@^0.15.0-alpha.4:
   version "0.15.0-alpha.4"
   resolved "https://registry.yarnpkg.com/slate-edit-table/-/slate-edit-table-0.15.0-alpha.4.tgz#d34362738ab30b980f3bd777ed9e2b8bb8499a6c"
 
-slate-md-editor@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/slate-md-editor/-/slate-md-editor-0.3.2.tgz#0dd634405a92d33e719d0bfd36936af9411fbdcc"
+slate-md-editor@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/slate-md-editor/-/slate-md-editor-0.3.3.tgz#e3a89d05071d83ffcd6a0dc702e8e2657c9484d7"
   dependencies:
     "@canner/slate-helper-block-list" "^0.1.12"
     "@canner/slate-helper-mark-removeall" "^0.1.3"
