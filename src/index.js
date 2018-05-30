@@ -101,7 +101,8 @@ const Container = styled.div`
   `)}
   background-color: #FFF;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 1px 1px rgba(0,0,0,0.16);
-  overflow-y: ${props => props.isFull ? 'scroll' : 'initial'};
+  overflow-y: ${props => props.isFull ? 'scroll' : 'hidden'};
+  overflow-x: hidden;
 `
 
 const EditorContainer = styled.div`

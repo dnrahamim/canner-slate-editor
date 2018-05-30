@@ -16,6 +16,11 @@ $ npm install --save canner-slate-editor
 - [x] Support inline sidebar
 - [x] Support markdown syntax, support list: https://github.com/Canner/slate-md-editor#feature-toc
 
+## Image upload
+
+In order to make image uploader work, you have to pass a prop called `serviceConfig`. `serviceConfig` can generate from https://github.com/Canner/image-service-config or you can directly pass props from https://ant.design/components/upload/ as object into `serviceConfig` prop. 
+
+
 ## Usage
 
 ```js
