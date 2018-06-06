@@ -114,7 +114,7 @@ export default class Toolbar extends React.Component<Props> {
                 className="__canner-editor_topToolbarItem"
                 disableClassName="__canner-editor_topToolbarItemDisabled"
                 strokeClassName="qlStroke"
-                serviceConfig={Type === 'image' && serviceConfig}
+                serviceConfig={Type === Image && serviceConfig}
                 strokeMitterClassName="qlStrokeMitter"
                 fillClassName="qlFill"
                 evenClassName="qlEven"
