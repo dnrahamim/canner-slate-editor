@@ -31,6 +31,7 @@ class DemoEditor extends React.Component<*, {value: Value}> {
               'X-Requested-With': null
             }
           }}
+          galleryConfig={null}
           />
       </div>
     );

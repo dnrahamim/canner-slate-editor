@@ -26,7 +26,8 @@ type Props = {
   isFull?: boolean,
   onChange: (change: Change) => void,
   goFull: () => void,
-  serviceConfig: any
+  serviceConfig: any,
+  galleryConfig?: any
 }
 
 const IconContainer = styled.div`
@@ -53,7 +54,7 @@ const Seperator = styled.div`
 
 export default class Toolbar extends React.Component<Props> {
   render() {
-    const { value, onChange, goFull, isFull, serviceConfig } = this.props;
+    const { value, onChange, goFull, isFull, serviceConfig, galleryConfig } = this.props;
 
     const options = [
       Undo,
@@ -115,6 +116,7 @@ export default class Toolbar extends React.Component<Props> {
                 disableClassName="__canner-editor_topToolbarItemDisabled"
                 strokeClassName="qlStroke"
                 serviceConfig={Type === Image && serviceConfig}
+                galleryConfig={Type === Image && galleryConfig}
                 strokeMitterClassName="qlStrokeMitter"
                 fillClassName="qlFill"
                 evenClassName="qlEven"

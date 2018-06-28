@@ -83,7 +83,8 @@ const plugins = [
 type Props = {
   value: Value,
   onChange: (change: Change) => void,
-  serviceConfig?: any
+  serviceConfig?: any,
+  galleryConfig?: any
 }
 
 type State = {
@@ -182,7 +183,7 @@ export default class EditorComponent extends React.Component<Props, State> {
   }
 
   render() {
-    const {value, onChange, serviceConfig, ...rest} = this.props;
+    const {value, onChange, serviceConfig, galleryConfig, ...rest} = this.props;
     const {isFull} = this.state;
 
     return (
@@ -194,12 +195,14 @@ export default class EditorComponent extends React.Component<Props, State> {
                 isFull={true}
                 value={value}
                 serviceConfig={serviceConfig}
+                galleryConfig={galleryConfig}
                 onChange={onChange}
                 goFull={this.goFull}/>
             </FixedToolbar>
           ) : (
             <Toolbar
               serviceConfig={serviceConfig}
+              galleryConfig={galleryConfig}
               value={value}
               onChange={onChange}
               goFull={this.goFull}/>
