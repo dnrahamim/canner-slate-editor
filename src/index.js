@@ -183,19 +183,22 @@ export default class EditorComponent extends React.Component<Props, State> {
   }
 
   render() {
-    const {value, onChange, serviceConfig, galleryConfig, ...rest} = this.props;
+    const {value, onChange, serviceConfig, galleryConfig, menuToolbarOption, readOnly, ...rest} = this.props;
     const {isFull} = this.state;
 
-    return (
+    return readOnly ? (
+      <CannerEditor value={value} readOnly={readOnly} />
+    ) : (
       <Container isFull={isFull} {...rest}>
         {
-          isFull ? (
+          readOnly && isFull ? (
             <FixedToolbar>
               <Toolbar
                 isFull={true}
                 value={value}
                 serviceConfig={serviceConfig}
                 galleryConfig={galleryConfig}
+                menuToolbarOption={menuToolbarOption}
                 onChange={onChange}
                 goFull={this.goFull}/>
             </FixedToolbar>
@@ -203,13 +206,14 @@ export default class EditorComponent extends React.Component<Props, State> {
             <Toolbar
               serviceConfig={serviceConfig}
               galleryConfig={galleryConfig}
+              menuToolbarOption={menuToolbarOption}
               value={value}
               onChange={onChange}
               goFull={this.goFull}/>
           )
         }
         <EditorContainer isFull={isFull}>
-          <CannerEditor value={value} onChange={onChange}/>
+          <CannerEditor value={value} onChange={onChange} readOnly={readOnly} />
         </EditorContainer>
       </Container>
     );
@@ -227,11 +231,12 @@ class CannerEditor extends React.Component<Props> {
   }
 
   render() {
-    const {value, onChange} = this.props;
+    const {value, onChange, readOnly} = this.props;
     return (
       <Editor 
         className="markdown-body"
         value={value}
+        readOnly={readOnly}
         onChange={onChange}
         plugins={plugins}
         />

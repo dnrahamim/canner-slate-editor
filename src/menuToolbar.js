@@ -54,48 +54,52 @@ const Seperator = styled.div`
 
 export default class Toolbar extends React.Component<Props> {
   render() {
-    const { value, onChange, goFull, isFull, serviceConfig, galleryConfig } = this.props;
+    const { value, onChange, goFull, isFull, serviceConfig, galleryConfig, menuToolbarOption } = this.props;
 
-    const options = [
-      Undo,
-      Redo,
+    const options = menuToolbarOption || [
+      { type: Undo, title: "Undo" },
+      { type: Redo, title: "Redo" },
       'seperator',
-      Header1,
-      Header2,
-      Header3,
-      Blockquote,
-      Hr,
+      { type: Header1, title: "Header One" },
+      { type: Header2, title: "Header Two" },
+      { type: Header3, title: "Header Three" },
+      { type: Blockquote, title: "Blockquote" },
+      { type: Hr, title: "Ruler" },
       'seperator',
-      AlignLeft,
-      AlignCenter,
-      AlignRight,
-      Indent,
-      Outdent,
+      { type: AlignLeft, title: "Align Left" },
+      { type: AlignCenter, title: "Align Center" },
+      { type: AlignRight, title: "Align Right" },
+      { type: Indent, title: "Indent" },
+      { type: Outdent, title: "Outdent" },
       'seperator',
-      OlList,
-      UlList,
+      { type: OlList, title: "Order List" },
+      { type: UlList, title: "Unorder List" },
       'seperator',
-      Link,
-      'image',
-      Video,
-      CodeBlock,
-      Table,
+      { type: Link, title: "Link" },
+      { type: 'image', title: "Image" },
+      { type: Video, title: "Video" },
+      { type: CodeBlock, title: "Code Bloack" },
+      { type: Table, title: "Table" },
       'seperator',
-      FontColor,
-      FontBgColor,
+      { type: FontColor, title: "Font Color" },
+      { type: FontBgColor, title: "Font Background Color" },
       'seperator',
-      'fullScreen'
+      { type: 'fullScreen', title: "Full Screen" },
     ]
 
     return (
       <Container>
-        {options.map((Type, i) => {
+        {options.map((option, i) => {
+          let Type = typeof(option) === "string" ? option : (option.type || option);
+          let title = option.title;
+
           if (Type === 'seperator')
             return <Seperator key={i}/>
           if (Type === 'fullScreen') {
             return (
               <IconContainer
-                key={i}>
+                key={i}
+                title={title}>
                 <FullScreenIcon className="__canner-editor_topToolbarItem" goFull={goFull} isFull={isFull}/>
               </IconContainer>
             )
@@ -108,7 +112,8 @@ export default class Toolbar extends React.Component<Props> {
 
           return (
             <IconContainer
-              key={i}>
+              key={i}
+              title={title}>
               <Type
                 change={value.change()}
                 onChange={onChange}
