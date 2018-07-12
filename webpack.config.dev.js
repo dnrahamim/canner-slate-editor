@@ -35,20 +35,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.less$/,
-        use: [
-          {
-            loader: 'style'
-          },
-          {
-            loader: 'css'
-          },
-          {
-            loader: 'less'
-          }
-        ],
-      },
-      {
         test: /\.md$/,
         use: 'raw-loader'
       }
