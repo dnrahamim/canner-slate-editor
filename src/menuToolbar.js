@@ -25,6 +25,7 @@ type Props = {
   value: Value,
   isFull?: boolean,
   onChange: (change: Change) => void,
+  menuToolbarOption: {[string]: any}[],
   goFull: () => void,
   serviceConfig: any,
   galleryConfig?: any

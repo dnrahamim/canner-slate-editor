@@ -81,6 +81,16 @@ const plugins = [
 ];
 
 type Props = {
+  readOnly: boolean,
+  menuToolbarOption: {[string]: any}[],
+  value: Value,
+  onChange: (change: Change) => void,
+  serviceConfig?: any,
+  galleryConfig?: any
+}
+
+type EditorProps = {
+  readOnly: boolean,
   value: Value,
   onChange: (change: Change) => void,
   serviceConfig?: any,
@@ -187,11 +197,11 @@ export default class EditorComponent extends React.Component<Props, State> {
     const {isFull} = this.state;
 
     return readOnly ? (
-      <CannerEditor value={value} readOnly={readOnly} />
+      <CannerEditor value={value} onChange={arg => arg} readOnly={readOnly} />
     ) : (
       <Container isFull={isFull} {...rest}>
         {
-          readOnly && isFull ? (
+          isFull ? (
             <FixedToolbar>
               <Toolbar
                 isFull={true}
@@ -222,9 +232,9 @@ export default class EditorComponent extends React.Component<Props, State> {
 
 @toolbar(toolbarOptions)
 @sidebar(sidebarOptions)
-class CannerEditor extends React.Component<Props> {
+class CannerEditor extends React.Component<EditorProps> {
 
-  shouldComponentUpdate(nextProps: Props) {
+  shouldComponentUpdate(nextProps: EditorProps) {
     if (this.props.value === nextProps.value)
       return false
     return true
