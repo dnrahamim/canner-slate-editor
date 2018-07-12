@@ -82,6 +82,45 @@ ReactDOM.render(
 
 see https://github.com/Canner/canner-slate-editor/blob/master/docs/index.js
 
+## Customization
+
+You are able to customize the toolbar as you like. Just pass as prop `menuToolbarOption`.
+
+Value should be as below.
+
+```js
+const menuToolbarOption = [
+  { type: Undo, title: "Undo" },
+  { type: Redo, title: "Redo" },
+  'seperator',
+  { type: Header1, title: "Header One" },
+  { type: Header2, title: "Header Two" },
+  { type: Header3, title: "Header Three" },
+  { type: Blockquote, title: "Blockquote" },
+  { type: Hr, title: "Ruler" },
+  'seperator',
+  { type: AlignLeft, title: "Align Left" },
+  { type: AlignCenter, title: "Align Center" },
+  { type: AlignRight, title: "Align Right" },
+  { type: Indent, title: "Indent" },
+  { type: Outdent, title: "Outdent" },
+  'seperator',
+  { type: OlList, title: "Order List" },
+  { type: UlList, title: "Unorder List" },
+  'seperator',
+  { type: Link, title: "Link" },
+  { type: 'image', title: "Image" },
+  { type: Video, title: "Video" },
+  { type: CodeBlock, title: "Code Bloack" },
+  { type: Table, title: "Table" },
+  'seperator',
+  { type: FontColor, title: "Font Color" },
+  { type: FontBgColor, title: "Font Background Color" },
+  'seperator',
+  { type: 'fullScreen', title: "Full Screen" },
+]
+```
+
 ## Start example server
 
 ```
