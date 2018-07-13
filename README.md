@@ -9,6 +9,16 @@
 $ npm install --save canner-slate-editor
 ```
 
+## UMD
+
+Minify file:
+
+https://unpkg.com/canner-slate-editor@0.6.1/dist/cannerSlateEditor.umd.min.js
+
+Unminify file:
+
+https://unpkg.com/canner-slate-editor@0.6.1/dist/cannerSlateEditor.umd.js
+
 ## Features
 
 - [x] Support full screen edit mode
