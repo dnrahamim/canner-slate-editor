@@ -24,11 +24,11 @@ Using this UMD file we have external some packages as below, you need to load th
 
 Minify file:
 
-https://unpkg.com/canner-slate-editor@0.6.1/dist/cannerSlateEditor.umd.min.js
+https://unpkg.com/canner-slate-editor@0.6.2/dist/cannerSlateEditor.umd.min.js
 
 Unminify file:
 
-https://unpkg.com/canner-slate-editor@0.6.1/dist/cannerSlateEditor.umd.js
+https://unpkg.com/canner-slate-editor@0.6.2/dist/cannerSlateEditor.umd.js
 
 ## Features
 
