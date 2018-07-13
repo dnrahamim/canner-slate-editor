@@ -11,9 +11,16 @@ $ npm install --save canner-slate-editor
 
 ## UMD
 
-Using this UMD file you will need to load `slate` umd js before it.
+Using this UMD file we have external some packages as below, you need to load them before loading `CannerSlateEditor` umd file.
 
-Slate umd: https://unpkg.com/slate@0.33.0/dist/slate.min.js
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+<script src="https://cdn.canner.io/antd/3.6.6/antd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/styled-components/3.4.0-4/styled-components.min.js"></script>
+<script src="https://unpkg.com/slate@0.33.0/dist/slate.min.js"></script>
+```
 
 Minify file:
 

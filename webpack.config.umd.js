@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const pkg = require('./package.json');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const {WebpackBundleSizeAnalyzerPlugin} = require('webpack-bundle-size-analyzer');
 
 module.exports = {
   entry: {
@@ -18,7 +19,11 @@ module.exports = {
     'react': "React",
     'react-dom': "ReactDOM",
     'slate': "Slate",
-    'styled-components': 'styled'
+    'styled-components': 'styled',
+    'antd': 'antd',
+    'lodash': '_',
+    'immutable': 'Immutable',
+    'moment': 'moment'
   },
   resolve: {
     extensions: ['.js'],
@@ -46,6 +51,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new WebpackBundleSizeAnalyzerPlugin('./report.txt'),
     new webpack.BannerPlugin({
       banner: `
 /**
