@@ -11,6 +11,10 @@ $ npm install --save canner-slate-editor
 
 ## UMD
 
+Using this UMD file you will need to load `slate` umd js before it.
+
+Slate umd: https://unpkg.com/slate@0.33.0/dist/slate.min.js
+
 Minify file:
 
 https://unpkg.com/canner-slate-editor@0.6.1/dist/cannerSlateEditor.umd.min.js
