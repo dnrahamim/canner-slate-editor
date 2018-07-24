@@ -1,6 +1,6 @@
 {
   "name": "canner-slate-editor",
-  "version": "0.6.4",
+  "version": "0.6.7",
   "description": "Another rich text editor using Slate framework with toolbar support",
   "homepage": "",
   "author": {
@@ -49,7 +49,7 @@
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.2.0",
-    "slate": "^0.33.6",
+    "slate": "^0.33.0",
     "slate-react": "^0.12.0",
     "style-loader": "^0.20.3",
     "uglifyjs-webpack-plugin": "^1.2.7",
@@ -77,7 +77,7 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || 16.x",
     "react-dom": "^0.14.0 || ^15.0.0 || 16.x",
-    "slate": "^0.33.6",
+    "slate": "^0.33.0",
     "slate-react": "^0.12.0"
   },
   "license": "Apache-2.0",

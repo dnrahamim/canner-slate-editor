@@ -21,7 +21,6 @@ module.exports = {
     'styled-components': 'styled',
     'antd': 'antd',
     'lodash': '_',
-    'immutable': 'Immutable',
     'moment': 'moment'
   },
   resolve: {
