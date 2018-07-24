@@ -10,7 +10,8 @@ module.exports = {
   resolve: {
     extensions: [".js"],
     alias: {
-      'styled-components': path.resolve(__dirname, 'node_modules', 'styled-components')
+      'styled-components': path.resolve(__dirname, 'node_modules', 'styled-components'),
+      'slate': path.resolve(__dirname, 'node_modules', 'slate')
     }
   },
   resolveLoader: {
