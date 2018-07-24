@@ -18,7 +18,6 @@ module.exports = {
   externals: {
     'react': "React",
     'react-dom': "ReactDOM",
-    'slate': "Slate",
     'styled-components': 'styled',
     'antd': 'antd',
     'lodash': '_',
