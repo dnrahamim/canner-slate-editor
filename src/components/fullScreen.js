@@ -7,7 +7,7 @@ type Props = {
   isFull?: boolean
 };
 
-export default class FullScreen extends React.Component<Props> {
+export default class FullScreenIcon extends React.Component<Props> {
   render() {
     const { className, goFull, isFull } = this.props;
 

@@ -4,6 +4,7 @@ import type {Value, Change} from 'slate';
 import styled from 'styled-components';
 import {Container} from './components/item';
 import FullScreenIcon from './components/fullScreen';
+import ChartIcon from './components/chart';
 
 import {AlignCenter, AlignLeft, AlignRight} from '@canner/slate-icon-align';
 import Blockquote from '@canner/slate-icon-blockquote';
@@ -79,13 +80,14 @@ export default class Toolbar extends React.Component<Props> {
       { type: Link, title: "Link" },
       { type: 'image', title: "Image" },
       { type: Video, title: "Video" },
-      { type: CodeBlock, title: "Code Bloack" },
+      { type: CodeBlock, title: "Code Block" },
       { type: Table, title: "Table" },
       'seperator',
       { type: FontColor, title: "Font Color" },
       { type: FontBgColor, title: "Font Background Color" },
       'seperator',
       { type: 'fullScreen', title: "Full Screen" },
+      { type: 'chart', title: "Chart" }
     ]
 
     return (
@@ -102,6 +104,16 @@ export default class Toolbar extends React.Component<Props> {
                 key={i}
                 title={title}>
                 <FullScreenIcon className="__canner-editor_topToolbarItem" goFull={goFull} isFull={isFull}/>
+              </IconContainer>
+            )
+          }
+
+          if (Type === 'chart') {
+            return (
+              <IconContainer
+                key={i}
+                title={title}>
+                <ChartIcon className="__canner-editor_topToolbarItem"/>
               </IconContainer>
             )
           }
